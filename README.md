@@ -4,6 +4,15 @@ A multi-agent research assistant that writes literature reviews. You give it a t
 
 It uses an orchestrator–worker pattern built with **LangGraph**. Tools are exposed through **MCP** (Model Context Protocol).
 
+> **Version 2 is available:** [Research_Assistant_2](https://github.com/bassantmedhat/Research_Assistant_2) is a rebuild that uses **Google ADK** to orchestrate the agents, **LangChain** for the tools, and **SQLite** for storage.
+
+## Versions
+
+| Version | Repo | Orchestration | Tools | Storage |
+|---|---|---|---|---|
+| v1 (this repo) | [Research_assistant](.) | LangGraph | arXiv via LangChain, MCP (planned) | none (in-memory) |
+| v2 | [Research_Assistant_2](https://github.com/bassantmedhat/Research_Assistant_2) | Google ADK (multi-agent) | LangChain | SQLite |
+
 ## Architecture
 
 ```

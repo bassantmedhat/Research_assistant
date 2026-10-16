@@ -62,7 +62,7 @@ verifier = llm.with_structured_output(Verdict)
 @task 
 async def plan(topic: str):
     """Planner / orchestrator: splits the topic into sections."""
-    result = await planner.invoke([
+    result = planner.ainvoke([
         SystemMessage(content="Generate a plan (list of sections) for a literature review on the given topic."),
         HumanMessage(content=f"Research topic: {topic}"),
 
